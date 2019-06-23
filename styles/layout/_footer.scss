@@ -1,0 +1,9 @@
+.footer {
+  padding: 16px 0 10px 0;
+  text-align: center;
+  background-color: $bg_header;
+  &__norm {
+    color: $cl_white;
+    @include rem(font-size, 14);
+  }
+}

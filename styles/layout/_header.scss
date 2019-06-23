@@ -1,0 +1,89 @@
+.header {
+  .block {
+    &__header {
+      display: block;
+      background-color: $bg_header;
+      text-align: right;
+      padding: 0 20px;
+      .item {
+        display: inline-block;
+        &__link {
+          color: #fff;
+          @include rem(font-size, 14);
+          font-weight: 700;
+        }
+        &:first-child {
+          &::after {
+            content: "|";
+            color: #fff;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+    &__content {
+      display: block;
+      background-color: $cl_white;
+      @include flexbox();
+      @include align-items(center);
+      padding: 5px 30px;
+      .logo {
+        width: 40%;
+        &__title {
+          @include rem(font-size, 20);
+          color: $bg_header;
+          font-family: "Yu";
+        }
+      }
+      .search {
+        width: 30%;
+        text-align: center;
+        .form {
+          &__control {
+            position: relative;
+            width: 300px;
+          }
+          &__input {
+            width: 100%;
+            outline: none;
+            border: 1px solid #ed7d31;
+            padding-left: 10px;
+          }
+          &__button {
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-color: #ed7d31;
+            border: none;
+            color: #fff;
+            padding: 2px 20px;
+          }
+        }
+      }
+      .list {
+        width: 20%;
+        @include flexbox();
+        @include justify-content(center);
+        background-color: $bg_panel;
+        padding: 3px 10px;
+        .item {
+          background-color: $cl_white;
+          margin-left: 5px;
+          margin-right: 5px;
+          padding: 0px 2px;
+          border: 1px solid rgba($color: #000000, $alpha: 0.5);
+          &:first-child {
+            background-color: transparent;
+            border: none;
+          }
+          &__link {
+            color: #000000;
+          }
+          &__norm {
+            @include rem(font-size, 16);
+          }
+        }
+      }
+    }
+  }
+}
